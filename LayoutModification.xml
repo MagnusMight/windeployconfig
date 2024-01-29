@@ -1,0 +1,38 @@
+<LayoutModificationTemplate Version="1" xmlns="http://schemas.microsoft.com/Start/2014/LayoutModification">
+<LayoutOptions StartTileGroupsColumnCount="1" />
+  <DefaultLayoutOverride>
+    <StartLayoutCollection>
+      <defaultlayout:StartLayout GroupCellWidth="6" xmlns:defaultlayout="http://schemas.microsoft.com/Start/2014/FullDefaultLayout">
+        <start:Group Name="TCS Education Systems Application" xmlns:start="http://schemas.microsoft.com/Start/2014/StartLayout">
+          <start:DesktopApplicationTile Size="1x1" Column="3" Row="2" DesktopApplicationID="{7C5A40EF-A0FB-4BFC-874A-C0F2E0B9FA8E}\Adobe\Acrobat Reader DC\Reader\AcroRd32.exe" />
+          <start:DesktopApplicationTile Size="1x1" Column="0" Row="3" DesktopApplicationID="{7C5A40EF-A0FB-4BFC-874A-C0F2E0B9FA8E}\Microsoft Office\Office16\MSACCESS.EXE" />
+          <start:DesktopApplicationTile Size="1x1" Column="1" Row="2" DesktopApplicationID="{7C5A40EF-A0FB-4BFC-874A-C0F2E0B9FA8E}\Microsoft Office\Office16\EXCEL.EXE" />
+          <start:DesktopApplicationTile Size="2x2" Column="2" Row="0" DesktopApplicationID="Microsoft.Office.OUTLOOK.EXE.16" />
+          <start:DesktopApplicationTile Size="1x1" Column="5" Row="2" DesktopApplicationID="{7C5A40EF-A0FB-4BFC-874A-C0F2E0B9FA8E}\Microsoft Office\Office16\POWERPNT.EXE" />
+          <start:DesktopApplicationTile Size="2x2" Column="4" Row="0" DesktopApplicationID="{7C5A40EF-A0FB-4BFC-874A-C0F2E0B9FA8E}\Microsoft Office\Office16\WINWORD.EXE" />
+          <start:DesktopApplicationTile Size="1x1" Column="0" Row="2" DesktopApplicationID="{7C5A40EF-A0FB-4BFC-874A-C0F2E0B9FA8E}\Microsoft Office\Office16\lync.exe" />
+          <start:DesktopApplicationTile Size="1x1" Column="1" Row="3" DesktopApplicationID="{7C5A40EF-A0FB-4BFC-874A-C0F2E0B9FA8E}\Microsoft Office\Office16\MSPUB.EXE" />
+          <start:DesktopApplicationTile Size="1x1" Column="2" Row="2" DesktopApplicationID="{7C5A40EF-A0FB-4BFC-874A-C0F2E0B9FA8E}\Microsoft Office\Office16\GROOVE.EXE" />
+          <start:DesktopApplicationTile Size="2x2" Column="0" Row="0" DesktopApplicationID="308046B0AF4A39CB" />
+          <start:DesktopApplicationTile Size="1x1" Column="4" Row="2" DesktopApplicationID="{6D809377-6AF0-444B-8957-A3773F02200E}\7-Zip\7zFM.exe" />
+          <start:Tile Size="1x1" Column="2" Row="3" AppUserModelID="Microsoft.WindowsCalculator_8wekyb3d8bbwe!App" />
+          <start:DesktopApplicationTile Size="1x1" Column="3" Row="3" DesktopApplicationID="{7C5A40EF-A0FB-4BFC-874A-C0F2E0B9FA8E}\Microsoft Office\Office16\ONENOTE.EXE" />
+          <start:DesktopApplicationTile Size="1x1" Column="4" Row="3" DesktopApplicationID="Microsoft.InternetExplorer.Default" />
+          <start:DesktopApplicationTile Size="1x1" Column="5" Row="3" DesktopApplicationID="Microsoft.Windows.RemoteDesktop" />
+        </start:Group>
+        <start:Group Name="Microsoft Application" xmlns:start="http://schemas.microsoft.com/Start/2014/StartLayout">
+          <start:Tile Size="2x2" Column="0" Row="0" AppUserModelID="Microsoft.MicrosoftEdge_8wekyb3d8bbwe!MicrosoftEdge" />
+          <start:Tile Size="1x1" Column="2" Row="0" AppUserModelID="Microsoft.Windows.Photos_8wekyb3d8bbwe!App" />
+          <start:Tile Size="1x1" Column="3" Row="0" AppUserModelID="Microsoft.Windows.Cortana_cw5n1h2txyewy!CortanaUI" />
+          <start:Tile Size="2x2" Column="0" Row="2" AppUserModelID="Microsoft.BingWeather_8wekyb3d8bbwe!App" />
+          <start:Tile Size="4x2" Column="2" Row="2" AppUserModelID="Microsoft.BingNews_8wekyb3d8bbwe!AppexNews" />
+          <start:Tile Size="4x2" Column="2" Row="4" AppUserModelID="Microsoft.BingFinance_8wekyb3d8bbwe!AppexFinance" />
+          <start:Tile Size="2x2" Column="0" Row="4" AppUserModelID="Microsoft.WindowsStore_8wekyb3d8bbwe!App" />
+          <start:Tile Size="1x1" Column="2" Row="1" AppUserModelID="windows.immersivecontrolpanel_cw5n1h2txyewy!microsoft.windows.immersivecontrolpanel" />
+          <start:Tile Size="2x2" Column="4" Row="0" AppUserModelID="Microsoft.BingSports_8wekyb3d8bbwe!AppexSports" />
+          <start:DesktopApplicationTile Size="1x1" Column="3" Row="1" DesktopApplicationID="{1AC14E77-02E7-4E5D-B744-2EB1AE5198B7}\SnippingTool.exe" />
+        </start:Group>
+      </defaultlayout:StartLayout>
+    </StartLayoutCollection>
+  </DefaultLayoutOverride>
+</LayoutModificationTemplate>

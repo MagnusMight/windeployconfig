@@ -1,0 +1,95 @@
+﻿SELECT
+MACHINE.CHASSIS_TYPE
+#, MACHINE.USER_FULLNAME
+, MACHINE.USER
+, MACHINE.CS_MODEL
+#, MACHINE.USER_LOGGED as User
+#, MACHINE.ID as TOPIC_ID
+, MACHINE.IP
+, MACHINE.NAME as NAME
+
+, CASE 
+WHEN MACHINE.IP like '10.16%' then 'PP Wells'
+WHEN MACHINE.IP like '10.90%' then 'VPN'
+WHEN MACHINE.IP like '10.17%' then 'PP Mart'
+WHEN MACHINE.IP like '10.19%' then 'TCSES'
+WHEN MACHINE.IP like '10.20%' then 'PP Los Angeles'
+WHEN MACHINE.IP like '10.21%' then 'PP Westwood'
+WHEN MACHINE.IP like '10.23%' then 'PP Irvine'
+WHEN MACHINE.IP like '10.24%' then 'PP DC South'
+WHEN MACHINE.IP like '10.25%' then 'Pacific Oaks'
+WHEN MACHINE.IP like '10.26%' then 'COL Santa Barbara'
+WHEN MACHINE.IP like '10.27%' then 'COL Ventura'
+WHEN MACHINE.IP like '10.28%' then 'PP DC North'
+WHEN MACHINE.IP like '10.30%' then 'Saybrook'
+WHEN MACHINE.IP like '10.32%' then 'Dallas Nursing'
+ELSE 'Offsite'
+END as 'Live Location'  
+
+#,DELL_WARRANTY.SERVICE_LEVEL_DESCRIPTION
+#, DELL_WARRANTY.ENTITLEMENT_TYPE
+#, DELL_WARRANTY.START_DATE
+#, Datediff(DELL_WARRANTY.START_Date,'2015-12-1 00:00:00') as Warranty
+, Datediff(CURDATE(), MIN(DELL_WARRANTY.START_Date)) as DaysOld
+
+, MIN(DELL_WARRANTY.START_DATE) as ShipDate
+
+,CASE 
+WHEN (MACHINE.CHASSIS_TYPE like 'desktop' and Datediff(CURDATE(), DELL_WARRANTY.START_Date) >= 1825) OR
+(MACHINE.CHASSIS_TYPE like 'laptop' and Datediff(CURDATE(), DELL_WARRANTY.START_Date) >= 1460) or
+(DELL_WARRANTY.START_Date is NULL)
+THEN 'Yes'
+ELSE 'No'
+END AS 'Refresh'
+
+
+FROM
+MACHINE
+LEFT JOIN DELL_WARRANTY
+on MACHINE.BIOS_SERIAL_NUMBER = DELL_WARRANTY.SERVICE_TAG
+AND DELL_WARRANTY.ENTITLEMENT_TYPE = 'INITIAL'
+
+
+wHERE
+((MACHINE.CHASSIS_TYPE <> 'Unknown')
+AND (MACHINE.CHASSIS_TYPE <> 'Server')
+AND (MACHINE.CHASSIS_TYPE <> 'other'))
+
+
+AND MACHINE.USER in ('bblount'
+,'BMcGrath'
+,'eschwab'
+,'eliljedahl'
+,'jdarland'
+,'jbenesh'
+,'ktorres'
+,'lstretch'
+,'mjankowski'
+,'MStowers'
+,'mdave'
+,'rcatagnus'
+,'sflynn'
+,'VPecanha'
+,'TMasson'
+,'adewalt'
+,'astrinwhitfield'
+,'aadkins'
+,'CBerger'
+,'cmalone'
+,'kbillstrom'
+,'mitzellesalonga'
+,'nserdy'
+,'rdavis'
+,'THudson'
+,'coverholt'
+
+)
+
+
+GROUP BY
+MACHINE.CHASSIS_TYPE
+, MACHINE.CS_MODEL
+, MACHINE.USER_LOGGED
+, MACHINE.NAME
+
+ORDER BY START_DATE ASC
